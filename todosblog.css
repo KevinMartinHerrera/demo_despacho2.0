@@ -1,0 +1,478 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800;900&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+:root{
+    --Playfair: 'Playfair Display', serif;
+    --Quicksand: 'Quicksand', sans-serif;
+    --Roboto: 'Roboto', sans-serif;
+    --dark: #3c393d;
+    --exDark: #2b2b2b;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background: #ffff;
+    font-family: 'Lora', serif;
+    overflow-x: hidden;
+}
+/** Navegation Menu **/
+/* Añadido para hacer el header más alto y con fondo transparente al principio */
+#header {
+    position: fixed;
+    background: transparent;
+    transition: background 0.5s ease;
+    width: 100%;
+    height: 100px; /* Ajusta la altura según tus necesidades */
+    z-index: 9999; 
+    padding-top: 5px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 5px;
+}
+.menu-responsive{
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 55px;
+
+}
+/* Añadido para dividir la sección derecha en dos partes */
+.menu .right-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+/* Añadido para estilizar la sección de contacto en la parte superior derecha */
+.menu .top-section {
+    display: flex;
+    padding-right: 50px;   
+}
+.menu .top-section p {
+    color: #fff;
+    margin: 7px; 
+    border-left: 1px solid rgba(255, 255, 255, 0.2); /* Ajusta el color y grosor según tus preferencias */
+    padding-left: 20px;
+
+}
+
+/* Añadido para separar la sección superior e inferior en la parte derecha */
+.menu .right-section > div {
+    margin-top: 10px; /* Espaciado entre las dos secciones */
+}
+
+/* Añadido para estilizar la sección de despacho en la parte inferior derecha */
+.menu .bottom-section .lists {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+.menu .bottom-section .lists li {
+    margin-right: 15px; 
+}
+
+.menu .bottom-section .lists li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px; 
+    border-bottom: 2px solid transparent; 
+    transition: border-bottom 0.3s ease; 
+}
+.menu .bottom-section .lists li a:hover {
+    border-bottom: 2px solid #46838a; 
+}
+/* Añadido para hacer el menú fijo y transparente al principio */
+.menu {
+    width: 100%;
+    height: 60px; /* Ajusta la altura según tus necesidades */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: transparent;
+    transition: background 0.5s ease;
+    z-index: 9999;
+}
+/* Añadido para cambiar el color de fondo del menú al hacer scroll */
+
+.btn-menu{display: none;}
+.menu .logobox{margin-left: 30px;}
+.menu .logobox h1 > a{
+    text-decoration: none;
+    color:#fff;
+    font-size: 30px;
+    font-weight: 400;
+}
+.menu .logobox h1 > a > i{color:#46838a; margin-right: 10px;}
+.menu .list-container{margin-right: 30px;}
+.menu .list-container .lists{display: flex;}
+.menu .list-container .lists li{list-style: none;}
+.menu .list-container .lists li a{
+    text-decoration: none;
+    color:#fff;
+    font-size: 19px;
+    margin:0px 7px;
+    padding: 5px;
+    border-radius: 3px;
+    transition: 300ms;
+}
+.menu .list-container .lists li a:hover{color:#46838a}
+.menu .list-container .lists li a.active{color:#46838a}
+/* Añadido para hacer el header negro al hacer scroll */
+#header.scrolled {
+    background: #051d2b;
+    padding-top: 0; /* Elimina el padding-top al hacer scroll */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+}
+/* Añadido para animar la transición del padding-top */
+#header {
+    transition: background 0.5s ease, padding-top 0.5s ease; /* Agregado para animar las transiciones */
+}
+/** Img header **/
+.img-header{
+    background: url(source/layaut2.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0,0,0,0.6);
+    background-blend-mode: soft-light;
+
+    position: relative;
+    width: 100%;
+    height:40vh;
+}
+.img-header .welcome{
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+}
+.img-header .welcome h4{
+    color: #ffff;
+    font-weight: 400;
+    font-size: 50px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.img-header .welcome > h2{margin-top: 50px;}
+.img-header .welcome > h2 a{
+    text-decoration: none;
+    color:#fff;
+    font-size: 50px;
+    font-weight: 400;
+}
+.img-header .welcome > h2 a > i{color:#3f506c; margin-right: 10px;}
+
+
+
+
+.title{
+    text-align: center;
+    padding: 1rem 0;
+}
+.title h2{
+    font-family: var(--Playfair);
+    font-size: 2.4rem;
+}
+.title p{
+    text-transform: uppercase;
+    padding: 0.6rem 0;
+}
+
+
+
+/* blog */
+.blog{
+    background: #f9f9f9;
+    padding: 4.5rem 0;
+}
+.blog-content{
+    margin: 2rem 0;
+}
+.blog-img{
+    position: relative;
+}
+.blog-img span{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: var(--exDark);
+    color: #fff;
+    font-size: 1.4rem;
+    padding: 0.3rem 0.6rem;
+}
+.blog-text{
+    margin: 2.2rem 0;
+    padding: 0 1rem;
+}
+.blog-text span{
+    font-weight: 300;
+    display: block;
+    padding-bottom: 0.5rem;
+}
+.blog-text h2{
+    font-family: var(--Playfair);
+    padding: 1rem 0;
+    font-size: 1.65rem;
+    font-weight: 500;
+}
+.blog-text p{
+    font-weight: 300;
+    font-size: 1.1rem;
+    opacity: 0.9;
+    padding-bottom: 1.2rem;
+}
+.blog-text a{
+    font-family: var(--Roboto);
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: var(--dark);
+    display: inline-block;
+    background: var(--dark);
+    color: #fff;
+    padding: 0.55rem 1.2rem;
+    transition: all 0.5s ease;
+}
+.blog-text a:hover{
+    background: var(--exDark);
+}
+/* Estilos para la sección de imágenes en el blog */
+.blog-item {
+    margin-bottom: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.blog-item:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.blog-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0; /* Bordes redondeados solo en la parte superior */
+}
+
+.blog-text {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 0 0 8px 8px; /* Bordes redondeados solo en la parte inferior */
+}
+
+.blog-text h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.blog-text span {
+    display: block;
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.blog-text p {
+    font-size: 1rem;
+    line-height: 1.4;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.blog-text a {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #46838a;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.blog-text a:hover {
+    background-color: #3f506c;
+}
+/** Footer **/
+/* Estilos generales del footer */
+footer {
+    background-color: #051d2b;
+    color: #fff;
+    padding: 40px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    max-width: 300px;
+}
+
+.footer-section h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.footer-section p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #666;
+}
+/* Media Queries */
+@media screen and (min-width: 540px){
+    .navbar-nav a{
+        padding-right: 1.2rem;
+        padding-left: 1.2rem;
+    }
+    .banner-title{
+        font-size: 5rem;
+    }
+    .banner form{
+        margin-top: 1.4rem;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (min-width: 768px){
+    
+    .navbar .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .search-input{
+        padding: 0.8rem 0;
+    }
+    .design-content{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    .design-item{
+        margin: 0;
+    }
+    .blog-content{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media screen and (min-width: 992px){
+    .blog-content{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .about-content{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 3rem;
+        align-items: center;
+    }
+    
+}
+
+@media screen and (min-width: 1200px){
+    .design-content{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media only screen and (max-width:1004px) {
+    
+    
+    /** Navegation Menu **/
+    .btn-menu{
+        position: absolute;
+        top: 12px;
+        right: 30px;
+        display: block;
+        color:#fff;
+        font-size: 30px;
+        cursor: pointer;
+    }
+    .top-section{
+        padding-top:200px;
+    }
+    .menu .list-container{
+        position: absolute;
+        top: 60px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 60px);
+        background: #000;
+        border-top: 3px solid #fff;
+    }
+    .menu .list-container .lists{
+        display: block;
+        width: 90%;
+        margin:50px auto;
+    }
+    .menu .list-container .lists li{
+        display: flex;
+        justify-content: center;
+        border-bottom: 2px solid #fff;
+    }
+    .menu .list-container .lists li a{
+        margin:5px 0px;
+    }
+    .top-section p{
+        display: none;
+    }
+
+    .welcome h4{
+        padding-top: 100px;
+    }
+    .welcome h2{
+        align-items: center;
+        text-align: center;
+    }
+
+
+    /** Img Header **/
+    .img-header .welcome{
+        width: 80%;
+        margin:auto;
+    }
+    .img-header .welcome h4{
+        font-size: 30px;
+        line-height: 45px;
+        align-items: center;
+        text-align: center;
+    }
+    .img-header .welcome > h2 a{
+        font-size: 40px;
+    }
+
+    
+
+}
